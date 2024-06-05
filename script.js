@@ -1,7 +1,7 @@
 const options = {
    method: 'GET',
    headers: {
-      'X-Api-Key': 'J2qucRftTzZNlLz7tFwkw03KL0HnQfHBa1eYEDfg'
+      'X-Api-Key': 'YOUR API KEY'
    }
 };
 
