@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weather</title>
+  <title>Weather Forecast</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -68,11 +68,14 @@
           </g>
         </g>
       </svg>
-      <form class="flex space-x-3 w-max justify-end">
-        <input type="search" id="search" class="pl-3 bg-white text-sm border rounded-lg" placeholder="Search Location">
-        <button type="submit" id="search_btn"
-          class="right-2.5 bottom-2.5 bg-transparent dark:hover:bg-white dark:hover:text-black font-medium rounded-lg text-sm px-4 py-2 border">Sesrch</button>
-      </form>
+      <div class="flex justify-end w-full">
+        <form class="flex space-x-3">
+          <input type="search" id="search" class="pl-3 bg-white dark:text-black text-sm border rounded-lg"
+            placeholder="Search Location">
+          <button type="submit" id="search_btn"
+            class="right-2.5 bottom-2.5 bg-transparent dark:hover:bg-white dark:hover:text-black font-medium rounded-lg text-sm px-4 py-2 border">Sesrch</button>
+        </form>
+      </div>
     </nav>
   </header>
 
@@ -80,8 +83,7 @@
     <div class="my-16 flex justify-center">
       <p class="font-bold text-3xl lg:text-5xl">Weather in <span id="city_name">Delhi</span></p>
     </div>
-    <div
-      class="px-10 py-5 shadow-md rounded-lg border dark:shadow-slate-100 dark:border-slate-100">
+    <div class="px-10 py-5 shadow-md rounded-lg border dark:shadow-slate-100 dark:border-slate-100">
       <p class="font-semibold text-xl">Today's Weather:<span id="temperature_valueC"> Loading...</span></p>
       <div class="margin">
         <p class="border my-2"></p>
