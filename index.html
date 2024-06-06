@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="overflow-hidden bg-slate-100 text-black dark:bg-blue-950 dark:text-white font-serif">
+<body class="overflow-hidden bg-slate-100 text-black dark:bg-blue-950 dark:text-white font-sans">
   <header>
     <nav class="flex items-center shadow-sm h-16 px-4 dark:shadow-slate-100 dark:shadow-md">
       <p class="text-3xl font-medium">Weather</p>
-      <svg fill="orange" class="h-12 mr-2 ml-1" version="1.1" id="svg_light" x="0px" y="0px" viewBox="0 0 128 128" xml:space="preserve">
+      <svg fill="orange" class="h-12 mr-2 ml-1" version="1.1" x="0px" y="0px" viewBox="0 0 128 128"
+        xml:space="preserve">
         <g>
           <g>
             <g>
@@ -50,7 +51,7 @@
             <path class="dark:fill-white" fill="#000" d="M94.486,89.054l-1.66-3.625c8.743-4.007,14.393-12.83,14.393-22.479c0-13.613-11.025-24.689-24.576-24.689
 			c-7.85,0-15.042,3.637-19.736,9.977l-3.204-2.372c5.373-7.259,13.948-11.592,22.94-11.592c15.75,0,28.563,12.864,28.563,28.675
 			C111.205,74.151,104.644,84.399,94.486,89.054z" />
-          </g> 
+          </g>
           <g>
             <path class="dark:fill-white" fill="#000" d="M94.466,110.599H18.497C8.297,110.599,0,102.268,0,92.026c0-8.853,6.187-16.372,14.651-18.163
 			c0.79-15.372,13.498-27.636,29.005-27.636c13.713,0,25.557,9.76,28.391,23.031c1.129-0.193,2.258-0.292,3.376-0.292
@@ -67,39 +68,29 @@
           </g>
         </g>
       </svg>
-      <form class="flex flex-grow max-w-full mx-auto justify-end">
-        <div class="relative min-w-min space-x-3 flex">
-          <input  type="search" id="search"
-            class="w-full pl-3 text-sm border rounded-lg bg-white"
-            placeholder="Search Location" name="search" required>
-            <input type="submit" value="Search" for="search" id="search_btn" class="right-2.5 bottom-2.5 bg-transparent dark:hover:bg-white dark:hover:text-black font-medium rounded-lg text-sm px-4 py-2 border">
-        </div>
+      <form class="flex space-x-3 w-max justify-end">
+        <input type="search" id="search" class="pl-3 bg-white text-sm border rounded-lg" placeholder="Search Location">
+        <button type="submit" id="search_btn"
+          class="right-2.5 bottom-2.5 bg-transparent dark:hover:bg-white dark:hover:text-black font-medium rounded-lg text-sm px-4 py-2 border">Sesrch</button>
       </form>
     </nav>
   </header>
 
   <main class="min-h-screen flex flex-col items-center">
     <div class="my-16 flex justify-center">
-      <p class="font-bold text-3xl lg:text-5xl">Weather in <span id="city_name"></span></p>
+      <p class="font-bold text-3xl lg:text-5xl">Weather in <span id="city_name">Delhi</span></p>
     </div>
-    <div class="px-10 py-6 shadow-md h-[45vh] sm:w-[50vw] rounded-lg border dark:shadow-slate-100 dark:border-slate-100">
-      <p class="font-semibold text-xl">Today's Weather:</p>
+    <div
+      class="px-10 py-5 shadow-md rounded-lg border dark:shadow-slate-100 dark:border-slate-100">
+      <p class="font-semibold text-xl">Today's Weather:<span id="temperature_valueC"> Loading...</span></p>
       <div class="margin">
         <p class="border my-2"></p>
       </div>
-      <div class="relative left-5">
-        <p class="font-bold text-3xl lg:text-6xl flex justify-end py-5">
-          <span id="temperature_valueC">Loading...</span>
-        </p>
-        <p class="font-semibold lg:text-3xl text-xl flex justify-end">
-          <span id="temperature_valueF">Loading...</span>
-        </p>
-      </div>
-      <div class="relative lg:py-1 py-5 bottom-[110px] space-y-[3vh] text-xl flex-col">
+      <div class="p-5 space-y-5 text-xl">
         <p>Min. Temp: <span id="min_temp">Loading...</span></p>
         <p>Max. Temp: <span id="max_temp">Loading...</span></p>
         <p>Feels like: <span id="feels_like">Loading...</span></p>
-        <p>Humidity: <span id="humidity"></span></p>
+        <p>Humidity: <span id="humidity">Loading...</span></p>
         <p>Wind Speed(Km/hr): <span id="wind_speed">Loading...</span></p>
         <p>Wind Degrees: <span id="wind_degrees">Loading...</span></p>
       </div>
