@@ -16,7 +16,7 @@ const getWeather = (location) => {
             max_temp.innerHTML = " " + response.max_temp + "°C";
             feels_like.innerHTML = " " + response.feels_like + "°C";
             humidity.innerHTML = " " + response.humidity + "%";
-            wind_speed.innerHTML = " " + response.wind_speed;
+            wind_speed.innerHTML = " " + response.wind_speed*3.6;
             wind_degrees.innerHTML = " " + response.wind_degrees;
          }
       })
